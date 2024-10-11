@@ -23,7 +23,7 @@ def somme(valeur1, valeur2):
     return f"<h2>La somme de {valeur1} et {valeur2} est : {resultat}</h2>"
 
 
-@app.route('/impairpair/<resultat') 
+@app.route('/impairpair/<resultat>') 
 def impairpair(resultat):
   if resultat % 2 == 0:
     return "Le résultat est pair"
