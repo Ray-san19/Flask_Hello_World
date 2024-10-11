@@ -21,6 +21,9 @@ def MaPremiereAPI():
 def somme(valeur1, valeur2):
     resultat = valeur1 + valeur2
     return f"<h2>La somme de {valeur1} et {valeur2} est : {resultat}</h2>"
+
+
+@app.route('/impair-pair/<resultat')  
     if resultat % 2 == 0:
       return "Le résultat est pair"
     else :
