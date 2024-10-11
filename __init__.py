@@ -21,7 +21,10 @@ def MaPremiereAPI():
 def somme(valeur1, valeur2):
     resultat = valeur1 + valeur2
     return f"<h2>La somme de {valeur1} et {valeur2} est : {resultat}</h2>"
-
+    if resultat % 2 == 0:
+      return "Le résultat est pair"
+    else :
+      return "Le résultat est impair"
                                                                                                               
 if __name__ == "__main__":
   app.run(debug=True)
