@@ -17,11 +17,14 @@ def exercices():
 def MaPremiereAPI():
     return render_template("contact.html")
 
+@app.route('/calcul_carre/<int:val_user>')
+def carre(val_user):
+    return "<h2>Le carré de votre valeur est : </h2>" + str(val_user * val_user)
+
 @app.route('/somme/<int:valeur1>/<int:valeur2>')
 def somme(valeur1, valeur2):
     resultat = valeur1 + valeur2
     return f"<h2>La somme de {valeur1} et {valeur2} est : {resultat}</h2>"
-
 
 @app.route('/impairpair/<int:resultat>') 
 def impairpair(resultat):
