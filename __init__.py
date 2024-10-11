@@ -37,6 +37,16 @@ def somme_global(valeurs):
   for i in range (len(lst)-1):
     somme += int(lst[i+1])
   return "La somme des éléments est:" + str(somme)
+
+@app.route('/max/<path:valeurs>')
+def max_value(valeurs):
+    valeurs_list = list(map(int, valeurs.split('/')))
+    valeur_max = valeurs_list[0]
+    
+    for valeur in valeurs_list:
+        if valeur > valeur_max:
+            valeur_max = valeur
+    return f"<h2>La valeur la plus importante parmi {valeurs_list} est : {valeur_max}</h2>"
                                                                                                               
 if __name__ == "__main__":
   app.run(debug=True)
