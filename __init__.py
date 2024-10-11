@@ -29,6 +29,14 @@ def impairpair(resultat):
     return "Le résultat est pair"
   else :
     return "Le résultat est impair"
+
+@app.route('/somme_global/<path:valeurs>')
+def somme_global(valeurs):
+  lst = valeurs.split('/')
+  somme = int(lst[0])
+  for i in range (len(lst)-1):
+    somme += int(lst[i+1])
+  return "La somme des éléments est:" + str(somme)
                                                                                                               
 if __name__ == "__main__":
   app.run(debug=True)
