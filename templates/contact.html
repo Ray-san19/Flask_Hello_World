@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            width: 80%;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        label {
+            margin-bottom: 10px;
+            font-size: 16px;
+            color: #333;
+        }
+        input, textarea {
+            margin-bottom: 20px;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            outline: none;
+            width: 100%;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+        .info {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .info p {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Contactez-nous</h1>
+        <form action="submit_form.php" method="post">
+            <label for="name">Nom</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Adresse email</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
+            <input type="submit" value="Envoyer">
+        </form>
+
+        <div class="info">
+            <h2>Ou contactez-nous directement :</h2>
+            <p><strong>Adresse :</strong> 123 Rue de l'Exemple, Paris, 75000</p>
+            <p><strong>Téléphone :</strong> +33 1 23 45 67 89</p>
+            <p><strong>Email :</strong> contact@example.com</p>
+        </div>
+    </div>
+</body>
+</html>
